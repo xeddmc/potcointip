@@ -23,7 +23,7 @@ You can install `jinja2`, `praw`, `sqlalchemy`, and `yaml` using `pip` (Python P
 
 * Example
 
-`sudo python pip install yaml`
+`sudo pip install yaml`
 
 The above command will install yaml using pip.
 
