@@ -60,12 +60,12 @@ Backups are very important! The last thing you want is losing user wallets or re
 
 There are three simple backup scripts included that support backing up database, wallets, and configuration files to local directory and (optionally) to a remote host with `rsync`. Make sure to schedule regular backups with cron and test whether they are actually performed. Example cron configuration:
 
-    0 8,20 * * * cd /path/to/potcointip/potcointip/src && python _backup_db.py ~/backups
-    0 9,21 * * * cd /path/to/potcointip/potcointip/src && python _backup_wallets.py ~/backups
-    0 10 * * * cd /path/to/potcointip/potcointip/src && python _backup_config.py ~/backups
+    0 8,20 * * * cd /path/to/potcointip/src && python _backup_db.py ~/backups
+    0 9,21 * * * cd /path/to/potcointip/src && python _backup_wallets.py ~/backups
+    0 10 * * * cd /path/to/potcointip/src && python _backup_config.py ~/backups
 
 ### Cron: Statistics
 
 Potcointip bot can be configured to generate tipping statistics pages (overall and per-user) and publish them using subreddit's wiki. After you configure and enable statistics in configuration, add the following cron job to update the main statistics page periodically:
 
-    0 */3 * * * cd /opt/potcointip/potcointip/src && python _update_stats.py
+    0 */3 * * * cd /path/to/potcointip/src && python _update_stats.py
